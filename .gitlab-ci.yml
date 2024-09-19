@@ -1,0 +1,10 @@
+image: node:lts
+# You can also change 'lts' to any supported LTS Node.js version.
+
+stages:
+  - e2e
+testim:
+  stage: e2e
+  script:
+    - npm install -g @testim/testim-cli
+    - testim --token "FhWpoM5ezR5kvXYN4BgDkHkj5ijEXmjuUnugYYapkPxgkYkeKY" --project "yUHggaUM53fuXM0PejOu" --grid "Testim-Grid" --name "login" --turbo-mode -r report.xml
